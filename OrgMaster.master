@@ -1,0 +1,65 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="OrgMaster, App_Web_mjvns0h3" clientidmode="Static" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head runat="server">
+    <title></title>
+
+    <script type="text/javascript" src="Scripts/jQuery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="Styles/MyStyle.css" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" ClientIDMode="Static"></asp:ContentPlaceHolder>
+</head>
+
+
+<body style="width:1020px; margin:auto;">
+    <form runat="server">
+    
+       <%--<asp:ScriptManager ID="myScriptManager" runat="server" AllowCustomErrorsRedirect="True" EnablePartialRendering="True"
+                    AsyncPostBackErrorMessage="Error in Ajax Loading... . .!'" />--%>
+
+        <div class="page">
+            <div class="header">
+                <div class="title" style="width: auto; height:50px; margin:0; padding:20px; font-family:Arial; font-size:28pt; color:#BCCAD4;">
+                    Organization Information Management System
+                </div>
+                
+                <div class="clear menubar">
+                    <div class="clear topmenu" style="float:left; min-width:750px;">
+                        <ul>
+                            <li>
+                                <a href="Home.aspx">Home</a>
+                            </li>
+                            <li>
+                                <a href="OrgEntry.aspx">Org Entry</a>
+                            </li>
+                            <li>
+                                <a href="OrgViewer.aspx">Org Viewer</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="float:right; vertical-align:middle; margin:10px;">
+                        <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Log Out" style="font-size:8.5pt; text-align:center;"></asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" ClientIDMode="Static" ViewStateMode="Enabled" />
+            </div> 
+        
+        </div>
+
+        <div class="footer" >
+            
+            <a href="http://www.cegisbd.com" target="_blank"><img src="Images/logoCEGIS.png" alt="" style="border:none;" /></a>
+            &copy; 2014 : Center for Environmental and Geographic Information Services | All Rights Reserved
+            
+        </div>
+
+    </form>
+</body>
+</html>
+
